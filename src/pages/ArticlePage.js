@@ -1,12 +1,13 @@
 import { useParams } from "react-router";
 import articles from "./article-content";
+import NotFound from "./NotFoundPage";
 
 const ArticlePage = () => {
   const { articleId } = useParams();
 
   const articleData = articles.find((article) => article.id == articleId);
 
-  if (!articleData) return <p>No Data Found</p>;
+  if (!articleData) return <NotFound />;
 
   return (
     <>

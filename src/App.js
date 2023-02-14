@@ -5,6 +5,7 @@ import ArticlePage from "./pages/ArticlePage";
 import ArticleList from "./pages/ArticlesList";
 import { Route, Routes } from "react-router-dom";
 import NavBar from "./components/NavBar";
+import NotFound from "./pages/NotFoundPage";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/about" element={<AboutUs />} />
           <Route path="/article/:articleId" element={<ArticlePage />} />
           <Route path="/article" element={<ArticleList />} />
+          <Route path="/*" element={<NotFound />} />
         </Routes>
       </div>
     </div>
